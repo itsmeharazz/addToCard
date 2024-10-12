@@ -1,0 +1,112 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+section{
+     height: 100vh;
+     margin: 1em;
+     padding: 1em;
+}
+.flex-box{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     
+}
+.card{
+     width: 24%;
+     height: 20em;
+     border: 1px solid #d9d9d9;
+     border-radius: 1em;
+     margin: 1em;
+     transition: 0.5s ease-in;
+     overflow: hidden;
+     position: relative;
+}
+
+.card:hover{
+     box-shadow: 0 0 20px #d9d9d9;
+}
+.card img{
+     width: 100%;
+     height: 100%;
+}
+.cardContent{
+position: absolute;
+bottom: 1em;
+left: 1em;
+color: #fff;
+
+}
+.cardContent h2{
+     font-size: 2em;
+}
+.price{
+     font-size: 1.5em;
+     font-weight: bold;
+}
+.arrow{
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     padding: 0.5em;
+     font-size: 2em;
+     color: #fff;
+     border-radius: 1em 0 0 0;
+     /* transform: rotate(-45deg); */
+     transition: 0.5s ease-in;
+     cursor: pointer;
+}
+.card:hover .arrow {
+     color: black;
+     background-color: aqua;
+
+}
+.fa-cart-shopping{
+position: fixed;
+right: 0;
+top:50%;
+font-size: 3em;
+padding: 0.5em;
+cursor: pointer;
+
+}
+.fa-cart-shopping:hover{
+     color: #6c6a6a;
+}
+.addCard{
+     width: 25em;
+     height: 27.5em;
+     position: fixed;
+     display: none;
+     right: 0;
+     top: 20%;
+     padding: 1em;
+     border-radius: 9% 0  0 9%;
+     background-color: #e1f0f0;
+     transition: all 0.5s ease-in-out;
+}
+.cardActive{
+     display: block;
+}
+.cadItem{
+     height: 70%;
+     overflow-x: hidden;
+}
+.cardHead{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1em;
+
+}
+.fa-circle-xmark{
+     font-size: 1.5em;
+     cursor: pointer;
+}
+.total{
+     margin-top: 1em;
+     text-align: right;
+}

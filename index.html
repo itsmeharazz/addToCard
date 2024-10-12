@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  clifford: '#da373d',
+                }
+              }
+            }
+          }
+        </script>
+          <style type="text/tailwindcss">
+               @layer utilities {
+                 .content-auto {
+                   content-visibility: auto;
+                 }
+               }
+             </style>
+     <link rel="stylesheet" href="./assetes/css/style.css">
+</head>
+<body>
+     <section>
+          <div class="flex-box">
+               <div class="card text-left">
+                    <img src="./assetes/image/cover-3.png" alt="">
+                    <div class="cardContent">
+                         <h2>Lorem ipsum </h2>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, at!</p>
+                         <p class="price">$500</p>
+                    </div>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+               </div>
+          </div>
+     </section>
+     <i class="fa-solid fa-cart-shopping"></i>
+     <div class="addCard ">
+          <div class="cardHead">
+               <p>Your card items</p>
+               <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+            <div class="cadItem">
+               <div class="ideatils">
+                    <div class="itemList cardHead">
+                         <img src="" alt="">
+                         <div class="name">
+                              <h5>lorem</h5>
+                              <p>#500</p>
+                         </div>
+                         <div class="quntaty cardHead">
+                              <i class="fa-solid fa-minus"></i>
+                              <p>0</p>
+                              <i class="fa-solid fa-plus"></i>
+                         </div>
+                         <p>$1000</p>
+                    </div>
+                    <hr>
+               </div>
+           
+          </div>
+          <div class="total">
+               <p>Total:$1500</p>
+               <p>shipping cost:$150</p>
+               <p>Grand Total:$1500</p>
+          </div>
+     </div>
+     <!-- js link -->
+      <script src="./assetes/js/shopingCard.js"></script>
+</body>
+</html>

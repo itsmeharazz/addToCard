@@ -53,17 +53,18 @@ color: #fff;
      bottom: 0;
      padding: 0.5em;
      font-size: 2em;
-     color: #fff;
      border-radius: 1em 0 0 0;
      /* transform: rotate(-45deg); */
      transition: 0.5s ease-in;
      cursor: pointer;
+     background-color: #fff;
 }
 .card:hover .arrow {
      color: black;
      background-color: aqua;
 
 }
+
 .fa-cart-shopping{
 position: fixed;
 right: 0;
@@ -76,6 +77,17 @@ cursor: pointer;
 .fa-cart-shopping:hover{
      color: #6c6a6a;
 }
+.count{
+     position: absolute;
+     right: 1em;
+     top: -0.9em;
+     font-size: 0.4em;
+     background-color: red;
+     padding: 0.5em;
+     color: #fff;
+     border-radius: 50%;
+}
+
 .addCard{
      width: 25em;
      height: 27.5em;
@@ -106,7 +118,16 @@ cursor: pointer;
      font-size: 1.5em;
      cursor: pointer;
 }
+.itemList img{
+     width: 4em;
+     height: 3em;
+     aspect-ratio: 2/1;
+}
 .total{
      margin-top: 1em;
      text-align: right;
+}
+.fa-trash-can{
+     color: #ea6969;
+     cursor: pointer;
 }

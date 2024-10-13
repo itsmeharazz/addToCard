@@ -72,48 +72,33 @@ window.addEventListener('DOMContentLoaded', () => {
      })
      // show 
      const productContainer = document.getElementById('product-container')
-     if(products.length >0){
-       products.forEach(product =>{
-       const productCard = document.createElement('div')
-       productCard.setAttribute('id',product.SKU)
-       productCard.innerHTML=`
-       
-       
-        <div class="border bg-slate-200 flex flex-col gap-4 rounded-lg border-slate-300 shadow shadow-black overflow-hidden  min-h-[400px]">
-       
-          <img src=${product.imageURL} class="aspect-square object-cover h-[150px] md:h-[200px]" >
-         <h2 class="font-semibold  text-center ">${product.productName}</h2>
-         <div class="flex mx-auto px-4 flex-col ">
-           <div class="flex gap-1">
-             <span class="text-neutral-600 font-semibold ">Brand: </span>
-             <span>${product.brand}</span>
-           </div>
-       
-           <div class="flex gap-1">
-             <span class="text-neutral-600 font-semibold ">Stock:</span>
-             <span id='product-stock'>${product.stockquantity}</span>
-           </div>
-         </div>
-         
-         <div class="">
-           <p id="price" class="text-xl font-semibold text-rose-600 text-center">$${product.price.toLocaleString('en',{
-             currency:'usd',
-             maximumFractionDigits:2,
-             minimumFractionDigits:2
-           })}</p>
-         </div>
-         <button 
-     
-         id='add-to-cart-btn'
-         class="bg-neutral-600 p-2 rounded text-white text-center w-[70%]  mx-auto mb-4 ">Add to cart</button>
-       
-       
-        
-       </div> 
-     
-       
-       `
-       productContainer.appendChild(productCard)
+     if(arrProducts.length >0){
+          arrProducts.forEach(product => {
+               const productCard = document.createElement('div')
+               productCard.setAttribute('id',product.id)
+               productCard.innerHTML= `
+                    <div class="card"></div>
+                    <img src="${product.image}">
+                    <div class="cardContent">
+                         <h2>${product.titel} </h2>
+                         <p>${product.des}</p>
+                         <p class="price">$${product.price.toLocaleString("en",{
+                              currency:"usd",
+                              maximumFractionDigits:2,
+                              minimumFractionDigits:2,
+                         })}</p>
+                    </div>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+               `
+               console.log(productCard)
+                         // productContainer.appendChild(productCard)
      })
+     }
+});
+
+// add to card
+productContainer.addEventListener("click",(e)=>{
+     if(e.target.id ==="arrow"){
+          const getProductParent= e.target.parentElement.parentElement   
      }
 });
